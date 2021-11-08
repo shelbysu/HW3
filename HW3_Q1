@@ -1,12 +1,25 @@
 #include <iostream>
 #include "Person.h"
+#include "Undergrad.h"
+#include "Grad.h"
 
 using namespace std;
 
 int main()
 {
     Person p1("Tony", "Stark", 1, 21, 1950);
+    Student s1(1);
+    Grad g1("Avenger");
+    Undergrad u1(" Magic", " Mischief");
     cout << p1.getName() << " born on: " << p1.getBirthdate() << endl;
-
+    s1.setAll("Bruce", "Banner", 18 , 12, 1969);
+    cout << s1.getName() << " born on: " << s1.getBirthdate() << " student num: " << s1.getStudentNum() << endl;
+    g1.setAll("Steve", "Rogers", 4, 4, 1918);
+    g1.setStudentNum(2);
+    cout << g1.getName() << " born on: " <<g1.getBirthdate() << " student num: " << g1.getStudentNum() << " program: " << g1.getProg() << endl;
+    u1.setAll("Loki", "Laufeyson", 17, 12, 965);
+    u1.setStudentNum(3);
+    cout << u1.getName() << " born on: " << u1.getBirthdate() << " student num: "<< u1.getStudentNum() << " Major: " << u1.getMajor() <<  " Concentration: " << u1.getCon() << endl;
     return 0;
 }
+
